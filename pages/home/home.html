@@ -1,0 +1,26 @@
+<ion-header>
+  	<ion-navbar align="center" color="primary">
+  		<ion-title>
+      		To Do List
+    	</ion-title>
+
+    	<ion-buttons end>
+    		<button navPush="AddToDoPage" ion-button>
+    			<ion-icon name="add">
+
+    			</ion-icon>
+    		</button>
+    	</ion-buttons>
+  	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  	<ion-list>
+      <ion-list-header>
+        To Do
+      </ion-list-header>
+      <ion-item *ngFor="let list of toDoList$ | async" detail-push navPush="EditToDoPage" [navParams]="{list: list}">
+        {{list.addtodo}}
+      </ion-item> 
+    </ion-list>
+</ion-content>

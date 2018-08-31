@@ -1,0 +1,29 @@
+<!--
+  Generated template for the EditToDoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{list?.addtodo}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-item>
+		<ion-label floating>
+			Add Things To Do
+		</ion-label>
+		<ion-input [(ngModel)]="list.addtodo">
+		</ion-input>
+	</ion-item>
+
+	<button ion-button block clear (clear)="saveList(list)">Save</button>
+
+	<button ion-button block clear color="danger" (clear)="removeList(list)">Delete</button>
+
+</ion-content>
